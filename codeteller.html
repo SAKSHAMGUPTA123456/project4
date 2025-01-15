@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body style="background-color: black;">
+    <div style=" display: flex; justify-content: center; position: relative; top: 90px;">
+    <input type="text" name="username" id="tip" style="width: 280px; position: relative; right: 20px;" placeholder="Type Something.....">
+    </div>
+    <div style="border: 2px solid white;width: 300px;position: relative; left: 500px; top: 100px; background-color: rgba(240, 248, 255, 0.192); ">
+        <h5 style="color: yellow;" id="we">Key pressed:</h5>
+        <h4 style="position: absolute; left: 90px; bottom: 115px; color: white;" id="text1"></h4>
+        <h5 style="color: yellow;">Key code:</h5>
+        <h4 style="position: absolute; color: white; left: 90px; bottom: 79px;" id="text2"></h4>
+        <h5 style="color: white;">Char code at:</h5>
+        <h4 style="position: absolute; color: aliceblue; left: 90px; bottom: 40px;" id="text3"></h4>
+        <h5 style="color: yellow;">Event type:</h5>
+        <h4 style="position: absolute; color: white; left: 90px; bottom: 4px; " id="text4"></h4>
+        </div>
+       
+</body>
+<script> 
+let er=document.getElementById('tip')
+let temp1=document.getElementById('text1');
+let temp2=document.getElementById('text2');
+let temp3=document.getElementById('text3');
+let temp4=document.getElementById('text4');
+const handle=(event)=>{
+temp1.innerText=`${event.key}`
+temp2.innerText=`${event.code}`
+temp3.innerText=`${event.key.charCodeAt(0)}`
+temp4.innerText=`${event.type}`
+}
+er.addEventListener('keyup',handle);
+
+
+</script>
+</html>
